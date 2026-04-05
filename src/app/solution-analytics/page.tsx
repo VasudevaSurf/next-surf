@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -7,8 +9,11 @@ import SplitSection from "@/components/SplitSection";
 import FAQ from "@/components/FAQ";
 import Link from "next/link";
 import { Activity, Users, LayoutDashboard } from "lucide-react";
+import SignupModal from "@/components/registration/SignupModal";
 
 export default function SolutionAnalyticsPage() {
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen pt-[72px]">
       <Navbar />
@@ -18,6 +23,7 @@ export default function SolutionAnalyticsPage() {
         description="Track your business performance, view sales dashboards, and get customer analytics to grow your business even more."
         image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1800&auto=format&fit=crop&q=80"
         ctaText="Get started"
+        onCtaClick={() => setIsSignupModalOpen(true)}
       />
 
       {/* 3 FEATURES */}
@@ -70,23 +76,23 @@ export default function SolutionAnalyticsPage() {
       />
 
       {/* CTA */}
-      <section className="py-20 px-8 bg-grey">
+      <section className="py-20 px-8 bg-seller-gradient">
         <div className="max-w-[1280px] mx-auto">
-          <div className="bg-grey p-[56px_48px] flex flex-col md:flex-row items-center justify-between gap-8 group">
+          <div className="p-[56px_48px] flex flex-col md:flex-row items-center justify-between gap-8 group">
             <div>
-              <h2 className="text-[clamp(1.4rem,2.5vw,2.2rem)] font-extrabold tracking-[-0.6px] text-black">
+              <h2 className="text-[clamp(1.4rem,2.5vw,2.2rem)] font-extrabold tracking-[-0.6px] text-white">
                 Getting started is easy — sign up today
               </h2>
-              <p className="text-[1.05rem] text-text-2 mt-2 leading-[1.5]">
+              <p className="text-[1.05rem] text-white/90 mt-2 leading-[1.5]">
                 Fill in a few details and you'll have access to your dashboard in no time.
               </p>
             </div>
-            <Link
-              href="#"
-              className="px-[28px] py-[12px] rounded-full bg-black text-white text-base font-bold no-underline hover:-translate-y-0.5 transition-all"
+            <button
+              onClick={() => setIsSignupModalOpen(true)}
+              className="px-[28px] py-[12px] rounded-full bg-white text-black text-base font-bold no-underline hover:bg-grey transition-all cursor-pointer border-none"
             >
               Get started
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -109,6 +115,10 @@ export default function SolutionAnalyticsPage() {
       />
 
       <Footer />
+
+      {isSignupModalOpen && (
+        <SignupModal onClose={() => setIsSignupModalOpen(false)} />
+      )}
     </main>
   );
 }

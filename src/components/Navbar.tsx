@@ -27,8 +27,8 @@ const Navbar = () => {
       id: "products",
       label: "Products",
       items: [
-        { label: "Surf Customer App", href: "/product-surf-app" },
-        { label: "Surf Self-delivery", href: "/product-self-delivery" },
+        { label: "Surf shopping App", href: "/product-surf-app" },
+        { label: "Fulfillment by seller", href: "/product-self-delivery" },
         { label: "Surf Storefront", href: "/product-storefront" },
       ],
     },
@@ -68,9 +68,8 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-white shadow-sm h-16" : "bg-white/80 backdrop-blur-md h-[72px]"
-        } border-b border-border-s flex items-center`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-sm h-16" : "bg-white/80 backdrop-blur-md h-[72px]"
+          } border-b border-border-s flex items-center`}
       >
         <div className="w-full max-w-[1280px] mx-auto px-6 md:px-8 flex items-center justify-between gap-4">
           {/* Logo */}
@@ -87,15 +86,13 @@ const Navbar = () => {
               <li key={link.id} className="relative group">
                 <button
                   onClick={() => toggleDropdown(link.id)}
-                  className={`flex items-center gap-1 px-3.5 py-2 rounded-lg text-[0.9rem] font-medium transition-colors cursor-pointer bg-none border-none outline-none ${
-                    activeDropdown === link.id ? "bg-grey text-brand" : "text-black hover:bg-grey"
-                  }`}
+                  className={`flex items-center gap-1 px-3.5 py-2 rounded-lg text-[0.9rem] font-medium transition-colors cursor-pointer bg-none border-none outline-none ${activeDropdown === link.id ? "bg-grey text-brand" : "text-black hover:bg-grey"
+                    }`}
                 >
                   {link.label}
                   <ChevronDown
-                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                      activeDropdown === link.id ? "rotate-180" : ""
-                    }`}
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === link.id ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 

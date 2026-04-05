@@ -48,10 +48,15 @@
   /* Custom Gradients */
   --background-brand-gradient: linear-gradient(145deg, #2d0f4a 0%, #663399 100%);
   --background-text-gradient: linear-gradient(90deg, #c490e6, #FFD93D);
+  --seller-gradient: linear-gradient(135deg, #A600F7 2.91%, #9101CF 100%);
 }
 
 .bg-brand-gradient {
   background: var(--background-brand-gradient);
+}
+
+.bg-seller-gradient {
+  background: var(--seller-gradient);
 }
 
 .text-gradient {

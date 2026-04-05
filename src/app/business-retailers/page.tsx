@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -8,8 +10,11 @@ import CardGrid from "@/components/CardGrid";
 import FAQ from "@/components/FAQ";
 import Link from "next/link";
 import { MapPin, Globe, Home } from "lucide-react";
+import SignupModal from "@/components/registration/SignupModal";
 
 export default function BusinessRetailersPage() {
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen pt-[72px]">
       <Navbar />
@@ -21,6 +26,7 @@ export default function BusinessRetailersPage() {
         description="Partner with Surf and serve customers where they're already shopping."
         image="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1000&auto=format&fit=crop&q=80"
         ctaText="Get started"
+        onCtaClick={() => setIsSignupModalOpen(true)}
       />
 
       {/* WHY PARTNER */}
@@ -52,6 +58,7 @@ export default function BusinessRetailersPage() {
         description="We'll assist you to set up and upload your items on Surf. We handle customer support, refunds, and the backend of payments including fraud prevention. Together with our extensive last-mile logistics experience, you can focus on growing your business."
         image="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&auto=format&fit=crop&q=80"
         ctaText="Get started →"
+        onCtaClick={() => setIsSignupModalOpen(true)}
       />
 
       {/* SELLER HUB APP */}
@@ -65,23 +72,23 @@ export default function BusinessRetailersPage() {
       />
 
       {/* CTA */}
-      <section className="py-20 px-8 bg-white">
+      <section className="py-20 px-8 bg-seller-gradient">
         <div className="max-w-[1280px] mx-auto">
-          <div className="bg-grey rounded-[24px] p-[56px_48px] flex flex-col md:flex-row items-center justify-between gap-8 group">
+          <div className="rounded-[24px] p-[56px_48px] flex flex-col md:flex-row items-center justify-between gap-8 group">
             <div>
-              <h2 className="text-[clamp(1.4rem,2.5vw,2.2rem)] font-extrabold tracking-[-0.6px] text-black max-w-[480px]">
+              <h2 className="text-[clamp(1.4rem,2.5vw,2.2rem)] font-extrabold tracking-[-0.6px] text-white max-w-[480px]">
                 Getting started is easy — sign up today
               </h2>
-              <p className="text-[1.05rem] text-text-2 mt-2 leading-[1.5]">
+              <p className="text-[1.05rem] text-white/90 mt-2 leading-[1.5]">
                 Fill in a few details and you'll be live in no time.
               </p>
             </div>
-            <Link
-              href="#"
-              className="px-[28px] py-[12px] rounded-full bg-black text-white text-base font-bold no-underline hover:-translate-y-0.5 transition-all"
+            <button
+              onClick={() => setIsSignupModalOpen(true)}
+              className="px-[28px] py-[12px] rounded-full bg-white text-black text-base font-bold no-underline hover:bg-grey transition-all cursor-pointer border-none"
             >
               Get started
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -147,6 +154,10 @@ export default function BusinessRetailersPage() {
       />
 
       <Footer />
+
+      {isSignupModalOpen && (
+        <SignupModal onClose={() => setIsSignupModalOpen(false)} />
+      )}
     </main>
   );
 }

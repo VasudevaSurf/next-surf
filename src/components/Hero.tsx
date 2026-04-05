@@ -12,6 +12,7 @@ interface HeroProps {
   ctaHref?: string;
   variant?: "full" | "split";
   badge?: string;
+  onCtaClick?: () => void;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -22,6 +23,7 @@ const Hero: React.FC<HeroProps> = ({
   ctaHref = "#",
   variant = "full",
   badge,
+  onCtaClick,
 }) => {
   if (variant === "split") {
     return (
@@ -59,12 +61,12 @@ const Hero: React.FC<HeroProps> = ({
               transition={{ duration: 0.6, delay: 0.2 }}
               className="w-full"
             >
-              <Link
-                href={ctaHref}
-                className="flex w-full items-center justify-start px-8 py-4 rounded-full bg-black text-white text-base font-bold no-underline hover:bg-[#333] transition-all shadow-lg"
+              <button
+                onClick={onCtaClick || (() => window.location.href = ctaHref)}
+                className="flex w-full items-center justify-start px-8 py-4 rounded-full bg-black text-white text-base font-bold no-underline hover:bg-[#333] transition-all shadow-lg cursor-pointer border-none"
               >
                 {ctaText}
-              </Link>
+              </button>
             </motion.div>
           </div>
           <div className="relative min-h-[360px] lg:min-h-full overflow-hidden">
@@ -109,12 +111,12 @@ const Hero: React.FC<HeroProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          <Link
-            href={ctaHref}
-            className="inline-flex items-center px-8 py-3.5 rounded-full bg-white text-black text-base font-bold no-underline hover:-translate-y-0.5 transition-all shadow-xl"
+          <button
+            onClick={onCtaClick || (() => window.location.href = ctaHref)}
+            className="inline-flex items-center px-8 py-3.5 rounded-full bg-white text-black text-base font-bold no-underline hover:-translate-y-0.5 transition-all shadow-xl cursor-pointer border-none"
           >
             {ctaText}
-          </Link>
+          </button>
         </motion.div>
       </div>
     </section>

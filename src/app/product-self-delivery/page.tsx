@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { QrCode, Clock, Smartphone, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,25 +11,30 @@ import Steps from "@/components/Steps";
 import CardGrid from "@/components/CardGrid";
 import FAQ from "@/components/FAQ";
 import Link from "next/link";
+import SignupModal from "@/components/registration/SignupModal";
 
 export default function ProductSelfDeliveryPage() {
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen pt-[72px]">
       <Navbar />
 
       <Hero
-        title="Surf orders. Delivered by your own couriers."
-        description="Use your in-house team to deliver Surf orders at a reduced commission — while getting access to Surf courier partners when you need them."
-        image="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1800&auto=format&fit=crop&q=80"
+        title="Surf orders. Fulfilled by you."
+        description="Use your own delivery team to fulfil Surf orders and set your own delivery rates, offer same day and next day delivery service to your customers."
+        image="/assets/fulfillment.jpg"
         ctaText="Get started"
+        onCtaClick={() => setIsSignupModalOpen(true)}
       />
 
       {/* WHAT IS SELF-DELIVERY */}
       <SplitSection
-        title="What is Self-delivery?"
-        description="Self-delivery brings you the benefits of being on Surf — more customers and more sales — while using your own delivery staff to fulfil your Surf orders. You control the delivery experience, set your own delivery area, and choose the delivery fee customers pay."
-        image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80"
+        title="What is Fulfilment by Seller?"
+        description="Fulfilment by Seller gives you all the benefits of selling on Surf- more customers, more orders, more revenue. while keeping full control of your delivery operation. Use your own couriers, set your own delivery timeframe, and decide the delivery fee your customers pay. You run the last mile, your way."
+        image="/assets/whatIsFull.png"
         ctaText="Get started →"
+        onCtaClick={() => setIsSignupModalOpen(true)}
       />
 
       {/* HOW IT WORKS — NUMBERED */}
@@ -35,15 +42,15 @@ export default function ProductSelfDeliveryPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center lg:[direction:rtl]">
             <div className="[direction:ltr] aspect-[4/3] rounded-[24px] overflow-hidden shadow-xl">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80" alt="How self delivery works" className="w-full h-full object-cover" />
+              <img src="/assets/howFull.png" />
             </div>
             <div className="[direction:ltr]">
               <Steps
-                title="How does self-delivery work?"
+                title="How does Fulfilment by Seller work?"
                 steps={[
-                  { title: "Customers browse your business", description: "Customers order for delivery or pickup through the Surf app or your Storefront." },
-                  { title: "Manage incoming orders", description: "Confirm orders on your Seller Hub app or point-of-sale integration." },
-                  { title: "Deliver to customers", description: "Prepare orders for your couriers to deliver. Use Surf courier partners when needed." }
+                  { title: "Customer places an order", description: "A customer browses for your product on the Surf app or website and places an order for delivery. You get notified instantly on your Seller Hub app." },
+                  { title: "Accept and prepare", description: "Confirm the order through your Seller Hub app or point-of-sale integration. Pack it, prepare it, and get it ready for dispatch; all managed from one place." },
+                  { title: "Your courier delivers, you collect the fee", description: "Hand the order to your own courier for delivery. The delivery fee you set is collected from the customer at checkout and added directly to your payout." }
                 ]}
               />
             </div>
@@ -52,20 +59,21 @@ export default function ProductSelfDeliveryPage() {
       </section>
 
       {/* LOWER COST */}
-      <SplitSection
+      {/* <SplitSection
         title="Reach new customers at a lower cost"
         description="Self-delivery partners enjoy the full range of marketing and sales benefits available to Surf sellers, but at a lower commission rate. You deliver, we cover the delivery cost — customers get free delivery."
         image="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&auto=format&fit=crop&q=80"
         ctaText="Get started →"
-      />
+        onCtaClick={() => setIsSignupModalOpen(true)}
+      /> */}
 
       {/* HYBRID */}
       <SplitSection
         theme="grey"
         reverse
-        title="Use the Surf courier network when you need it"
-        description="With Self-delivery's hybrid option, Surf courier partners are still available to you — for example when an order is placed after your team's delivery hours, during peak demand, or outside your delivery area."
-        image="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop&q=80"
+        title="Use Surf's logistics partner network when you need it"
+        description="With Fulfilment by Seller's hybrid option, Surf's logistics partner network is always on standby, whether an order comes in after your team's delivery hours, during peak demand periods, or outside your usual delivery area. You stay in control, with backup always ready."
+        image="/assets/logistics.png"
       />
 
       {/* QR STEPS — RESTORING ORIGINAL ICONS */}
@@ -96,23 +104,23 @@ export default function ProductSelfDeliveryPage() {
         ]}
       />
 
-      <section className="py-20 px-8 bg-grey">
+      <section className="py-20 px-8 bg-seller-gradient">
         <div className="max-w-[1280px] mx-auto">
-          <div className="bg-grey p-[56px_48px] flex flex-col md:flex-row items-center justify-between gap-8 group">
+          <div className="p-[56px_48px] flex flex-col md:flex-row items-center justify-between gap-8 group">
             <div>
-              <h2 className="text-[clamp(1.4rem,2.5vw,2.2rem)] font-extrabold tracking-[-0.6px] text-black max-w-[480px]">
+              <h2 className="text-[clamp(1.4rem,2.5vw,2.2rem)] font-extrabold tracking-[-0.6px] text-white max-w-[480px]">
                 Getting started is easy — sign up today
               </h2>
-              <p className="text-[1.05rem] text-text-2 mt-2 leading-[1.5]">
+              <p className="text-[1.05rem] text-white/90 mt-2 leading-[1.5]">
                 Fill in a few details about your business and you'll be live in no time.
               </p>
             </div>
-            <Link
-              href="#"
-              className="px-[28px] py-[12px] rounded-full bg-black text-white text-base font-bold no-underline hover:-translate-y-0.5 transition-all"
+            <button
+              onClick={() => setIsSignupModalOpen(true)}
+              className="px-[28px] py-[12px] rounded-full bg-white text-black text-base font-bold no-underline hover:bg-grey transition-all cursor-pointer border-none"
             >
               Get started
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -162,6 +170,10 @@ export default function ProductSelfDeliveryPage() {
       />
 
       <Footer />
+
+      {isSignupModalOpen && (
+        <SignupModal onClose={() => setIsSignupModalOpen(false)} />
+      )}
     </main>
   );
 }

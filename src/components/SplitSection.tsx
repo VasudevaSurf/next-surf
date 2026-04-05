@@ -13,6 +13,7 @@ interface SplitSectionProps {
   theme?: "light" | "grey" | "dark" | "brand";
   ctaText?: string;
   ctaHref?: string;
+  onCtaClick?: () => void;
 }
 
 const SplitSection: React.FC<SplitSectionProps> = ({
@@ -24,6 +25,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
   theme = "light",
   ctaText,
   ctaHref = "#",
+  onCtaClick,
 }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-10%" });
@@ -73,16 +75,29 @@ const SplitSection: React.FC<SplitSectionProps> = ({
             )}
             {ctaText && (
               <div className="mt-8">
-                <Link
-                  href={ctaHref}
-                  className={`inline-flex items-center px-[28px] py-[12px] rounded-full font-bold no-underline transition-all hover:-translate-y-0.5 ${
-                    ["dark", "brand"].includes(theme)
-                      ? "bg-white text-black hover:bg-grey"
-                      : "bg-brand text-white hover:bg-brand-d"
-                  }`}
-                >
-                  {ctaText}
-                </Link>
+                {onCtaClick ? (
+                  <button
+                    onClick={onCtaClick}
+                    className={`inline-flex items-center px-[28px] py-[12px] rounded-full font-bold no-underline transition-all hover:-translate-y-0.5 cursor-pointer border-none ${
+                      ["dark", "brand"].includes(theme)
+                        ? "bg-white text-black hover:bg-grey"
+                        : "bg-brand text-white hover:bg-brand-d"
+                    }`}
+                  >
+                    {ctaText}
+                  </button>
+                ) : (
+                  <Link
+                    href={ctaHref}
+                    className={`inline-flex items-center px-[28px] py-[12px] rounded-full font-bold no-underline transition-all hover:-translate-y-0.5 ${
+                      ["dark", "brand"].includes(theme)
+                        ? "bg-white text-black hover:bg-grey"
+                        : "bg-brand text-white hover:bg-brand-d"
+                    }`}
+                  >
+                    {ctaText}
+                  </Link>
+                )}
               </div>
             )}
           </motion.div>
