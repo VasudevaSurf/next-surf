@@ -14,8 +14,8 @@ export default function ProductStorefrontPage() {
       <Navbar />
 
       <Hero
-        title="Your own online ordering platform, powered by Surf"
-        description="Turn your website, social media, or Google profile into direct ordering channels. Surf handles payments, customer support, and delivery."
+        title="Your entire business, in your pocket."
+        description="Accept orders instantly, monitor your sales, and update your listings. right from your phone."
         image="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1800&auto=format&fit=crop&q=80"
         ctaText="Sign up"
       />
@@ -51,8 +51,14 @@ export default function ProductStorefrontPage() {
 
       {/* HOW STOREFRONT WORKS */}
       <SplitSection
-        title="How Storefront works"
-        description="Share your Storefront link on your website, social media, and Google Business Profile to drive direct online orders. Add QR codes in your store for skip-the-line ordering. Offer pickup or delivery fulfilled with Surf's couriers or your own fleet."
+        title="How the Seller Hub app works"
+        description={
+          <>
+            Register as a seller directly from the app, get approved by our team, and start listing your products from your phone the same day.
+            <br /><br />
+            Already have a website? Connect it through the Surf admin backend on your laptop, sync your entire product catalogue at once, and manage everything going forward, right from the app.
+          </>
+        }
         image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80"
         ctaText="Sign up →"
       />
@@ -61,14 +67,29 @@ export default function ProductStorefrontPage() {
       <SplitSection
         theme="grey"
         reverse
-        title="One system for all your orders"
-        description="With Storefront, orders from your website, Instagram, Google, or in-store QR codes flow directly to your tablet, mobile device, or POS system. Give your customers a smoother ordering experience across all channels."
+        title="What you get with Surf seller hub"
+        description={
+          <>
+            <b>Never miss an order or a low stock alert </b><br></br>
+            Get notified the moment a new order comes in — accept it, manage it, and update its status directly from the app. Receive automatic low stock alerts so you're never caught off guard.
+            <br></br><br></br>
+            <b>Add new products in seconds — right from your phone</b> <br></br>
+            Got a new product in store? List it instantly. Take a photo on the spot or choose from your gallery, add the product name, description, price, and stock level, and it's live on Surf in a few taps.
+            <br></br><br></br>
+            <b>Multiple users. One store. Full control.</b> <br></br>
+            Give your team access to the Seller Hub app.
+            Your sales staff in the store can see incoming orders, pack them, and mark them as ready, all from their own device. You stay in control while your team handles the ground work.
+            <br></br><br></br>
+            <b>Track sales and get smart insights</b> <br></br>
+            Monitor your revenue, top-selling products and much more. Use the built-in Seller AI assistant to get instant answers- ask which products are selling fastest, where your orders are coming from, and what to restock next.
+          </>
+        }
         image="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&auto=format&fit=crop&q=80"
         ctaText="Sign up →"
       />
 
       {/* WHAT YOU GET */}
-      <FeatureGrid
+      {/* <FeatureGrid
         title="What you get with Storefront"
         features={[
           {
@@ -93,7 +114,7 @@ export default function ProductStorefrontPage() {
           }
         ]}
         columns={4}
-      />
+      /> */}
 
       <section className="py-8 md:py-20 px-8 bg-grey">
         <div className="max-w-[1280px] mx-auto">
@@ -103,14 +124,14 @@ export default function ProductStorefrontPage() {
                 Getting started is easy
               </h2>
               <p className="text-[1.05rem] text-text-2 mt-2 leading-[1.5]">
-                Sign up and launch your branded ordering platform in days.
+                Download the Surf Seller Hub app, register or login to your business and manage your online store entirely from your phone.
               </p>
             </div>
             <Link
               href="#"
               className="px-[28px] py-[12px] rounded-full bg-black text-white text-base font-bold no-underline hover:-translate-y-0.5 transition-all"
             >
-              Sign up
+              Download the app
             </Link>
           </div>
         </div>

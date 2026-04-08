@@ -19,8 +19,8 @@ export default function SolutionIntegrationsPage() {
       <Navbar />
 
       <Hero
-        title="Integrate your point of sale system"
-        description="Seamlessly fulfil orders, manage your online business, and elevate your customer experience with leading POS and platform integrations."
+        title="Plug and sell"
+        description="Connect your existing website with Surf in a few clicks and everything comes with it; products, images, descriptions, prices, and stock levels synced instantly. No manual uploads, no starting from scratch, no tech team needed."
         image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1800&auto=format&fit=crop&q=80"
         ctaText="Get started"
       />
@@ -28,34 +28,34 @@ export default function SolutionIntegrationsPage() {
       {/* 4 FEATURE ICONS */}
       <FeatureGrid
         theme="grey"
-        title="Save time and effort with Surf integrations"
+        title="Save time and effort with Surf Plug and Sell feature"
         columns={4}
         features={[
           {
             title: "Smoother operations",
-            description: "Receive Surf orders directly on your POS or existing system. No need for extra hardware or software.",
+            description: "Connect your website once and you are in. Everything — orders, products, and stock flows between your website and Surf without a hassle.",
             icon: <Zap className="w-7 h-7" />
           },
           {
             title: "Easy catalogue management",
-            description: "Changes made on your existing platform automatically sync to your Surf store page in real time.",
+            description: "Update a product on your website and it updates on Surf instantly. New items, edited descriptions, fresh images  all synced automatically, no manual work needed.",
             icon: <Menu className="w-7 h-7" />
           },
           {
             title: "Supporting inventory management",
-            description: "Save time updating prices and inventory of large retail catalogues — synced automatically.",
+            description: "Your stock levels stay accurate across both platforms at all times. Sell something on your website, stock level syncs.",
             icon: <Server className="w-7 h-7" />
           },
           {
-            title: "Increase order accuracy",
-            description: "Eliminate manual order entry on your POS, reducing human error and order mistakes.",
+            title: "A whole new sales channel; zero extra effort",
+            description: "List your products on Surf and reach more customers across Malta. More visibility, more orders, more revenue, alongside everything you already do.",
             icon: <Check className="w-7 h-7" />
           }
         ]}
       />
 
       {/* PARTNER LOGOS */}
-      <section className="py-8 md:py-20 px-8 bg-white">
+      {/* <section className="py-8 md:py-20 px-8 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-extrabold tracking-[-0.8px] leading-[1.15] text-black mb-4">
             Surf integration partners
@@ -76,7 +76,7 @@ export default function SolutionIntegrationsPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* WAYS TO CONNECT */}
       <section className="py-8 md:py-20 px-8 bg-grey">

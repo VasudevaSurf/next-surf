@@ -25,7 +25,7 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
@@ -44,14 +44,14 @@ const Navbar = () => {
         { label: "Home", href: "/" },
         { label: "Surf shopping App", href: "/product-surf-app" },
         { label: "Fulfillment by seller", href: "/product-self-delivery" },
-        { label: "Surf Storefront", href: "/product-storefront" },
+        { label: "Surf Seller hub", href: "/product-storefront" },
       ],
     },
     {
       id: "solutions",
       label: "Solutions",
       items: [
-        { label: "Integrations", href: "/solution-integrations" },
+        { label: "Plug & Sell", href: "/solution-integrations" },
         { label: "Analytics & Insights", href: "/solution-analytics" },
         { label: "Promotions", href: "/solution-promotions" },
         //{ label: "Surf+ for Sellers", href: "/solution-seller-plus" },
