@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 interface HeroProps {
   title: string;
-  description: string;
+  description: React.ReactNode;
   image: string;
   ctaText?: string;
   ctaHref?: string;

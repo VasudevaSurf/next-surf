@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 
 interface SplitSectionProps {
   title: string;
-  description?: string;
+  description?: React.ReactNode;
   children?: React.ReactNode;
   image: string;
   reverse?: boolean;
