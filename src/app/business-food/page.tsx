@@ -54,7 +54,7 @@ export default function BusinessFoodPage() {
       />
 
       {/* CTA */}
-      <section className="py-20 px-8 bg-grey">
+      <section className="md:py-20 px-8 bg-grey">
         <div className="max-w-[1280px] mx-auto">
           <div className="bg-grey rounded-[24px] p-[56px_48px] flex flex-col md:flex-row items-center justify-between gap-8 group">
             <div>

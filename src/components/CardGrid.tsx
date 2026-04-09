@@ -28,14 +28,14 @@ const CardGrid: React.FC<CardGridProps> = ({ title, cards }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-[clamp(1.8rem,3vw,2.4rem)] font-extrabold tracking-[-0.8px] leading-[1.15] text-black mb-12"
+          className="text-[clamp(1.8rem,3vw,2.4rem)] font-extrabold tracking-[-0.8px] leading-[1.15] text-black mb:8 md:mb-12"
         >
           {title}
         </motion.h2>
       )}
 
       <div 
-        className="grid gap-6 mt-12"
+        className="grid gap-6 mt-8 md:mt-12"
         style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))' }}
       >
         {cards.map((card) => (

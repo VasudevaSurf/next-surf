@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({
     return (
       <section className="relative w-full overflow-hidden bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[520px] items-stretch">
-          <div className="flex flex-col justify-center px-6 md:px-12 py-16 lg:py-24 max-w-[640px] ml-auto w-full">
+          <div className="order-2 lg:order-1 flex flex-col justify-center px-6 md:px-12 py-12 lg:py-24 max-w-[640px] ml-auto w-full">
             {badge && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -69,7 +69,7 @@ const Hero: React.FC<HeroProps> = ({
               </button>
             </motion.div>
           </div>
-          <div className="relative min-h-[360px] lg:min-h-full overflow-hidden">
+          <div className="order-1 lg:order-2 relative min-h-[360px] lg:min-h-full overflow-hidden">
             <img
               src={image}
               alt={title}

@@ -68,7 +68,7 @@ export default function SolutionPromotionsPage() {
       />
 
       {/* CTA */}
-      <section className="py-20 px-8 bg-white">
+      <section className="py-12 md:py-20 px-8 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <div className="bg-grey rounded-[24px] p-[56px_48px] flex flex-col md:flex-row items-center justify-between gap-8 group">
             <div>

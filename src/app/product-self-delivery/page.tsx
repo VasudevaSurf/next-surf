@@ -38,9 +38,9 @@ export default function ProductSelfDeliveryPage() {
       />
 
       {/* HOW IT WORKS — NUMBERED */}
-      <section className="py-20 px-8 bg-grey">
+      <section className="py-12 md:py-20 px-8 bg-grey">
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center lg:[direction:rtl]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20 items-center lg:[direction:rtl]">
             <div className="[direction:ltr] aspect-[4/3] rounded-[24px] overflow-hidden shadow-xl">
               <img src="/assets/howFull.png" />
             </div>
@@ -104,7 +104,7 @@ export default function ProductSelfDeliveryPage() {
         ]}
       />
 
-      <section className="py-20 px-8 bg-seller-gradient">
+      <section className="md:py-20 px-8 bg-seller-gradient">
         <div className="max-w-[1280px] mx-auto">
           <div className="p-[56px_48px] flex flex-col md:flex-row items-center justify-between gap-8 group">
             <div>
@@ -126,7 +126,7 @@ export default function ProductSelfDeliveryPage() {
       </section>
 
       {/* ALSO INCLUDES */}
-      <section className="py-20 px-8 bg-white">
+      <section className="py-12 md:py-20 px-8 bg-white">
         <CardGrid
           title="Self-delivery also includes:"
           cards={[

@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white/75 pt-16 pb-8 px-6 md:px-8">
+    <footer className="bg-black text-white/75 max-sm:py-12 sm:pt-16 sm:pb-8 px-6 md:px-8">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr_1fr_1fr] gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr_1fr_1fr] gap-10 pb-8 sm:pb-12 border-b border-white/10">
           {/* Brand Column */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2 sm:gap-4">
             <Link href="/" className="text-white text-2xl font-extrabold no-underline mb-4 block">
               Surf
             </Link>

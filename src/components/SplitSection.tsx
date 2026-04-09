@@ -40,9 +40,9 @@ const SplitSection: React.FC<SplitSectionProps> = ({
   const textClasses = ["dark", "brand"].includes(theme) ? "text-white/80" : "text-text-2";
 
   return (
-    <section className={`py-20 px-6 md:px-8 overflow-hidden transition-colors ${themeClasses[theme]}`}>
+    <section className={`py-12 md:py-20 px-6 md:px-8 overflow-hidden transition-colors ${themeClasses[theme]}`}>
       <div className="max-w-[1280px] mx-auto" ref={ref}>
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${reverse ? "lg:[direction:rtl]" : ""}`}>
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center ${reverse ? "lg:[direction:rtl]" : ""}`}>
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: reverse ? 40 : -40 }}
@@ -58,7 +58,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
             initial={{ opacity: 0, x: reverse ? -40 : 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="[direction:ltr] flex flex-col justify-center gap-6"
+            className="[direction:ltr] flex flex-col justify-center gap-4 md:gap-6"
           >
             <h2 className="text-[clamp(1.6rem,2.5vw,2.2rem)] font-extrabold tracking-[-0.6px] leading-[1.15]">
               {title}
@@ -74,7 +74,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
               </div>
             )}
             {ctaText && (
-              <div className="mt-8">
+              <div className="mt-2 md:mt-8">
                 {onCtaClick ? (
                   <button
                     onClick={onCtaClick}

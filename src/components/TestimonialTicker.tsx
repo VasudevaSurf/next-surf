@@ -163,14 +163,14 @@ const TestimonialTicker: React.FC<TestimonialTickerProps> = ({ items = defaultIt
   const displayItems = [...items, ...items, ...items];
 
   return (
-    <section className="py-20 bg-white overflow-hidden relative">
+    <section className="py-12 md:py-20 bg-white overflow-hidden relative">
       {title && (
         <div className="max-w-[1280px] mx-auto px-8 mb-12 text-center">
           <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-extrabold tracking-[-0.8px] leading-[1.15] text-black">
             {title}
           </h2>
           {subtitle && (
-            <p className="mt-4 text-text-2 text-sm max-w-[600px] mx-auto">
+            <p className="mt-3 md:mt-4 text-text-2 text-sm max-w-[600px] mx-auto">
               {subtitle}
             </p>
           )}
@@ -183,7 +183,7 @@ const TestimonialTicker: React.FC<TestimonialTickerProps> = ({ items = defaultIt
           <div className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-white to-transparent" />
         </div>
 
-        <div className="flex animate-ticker w-max gap-4 px-4">
+        <div className="flex animate-ticker w-max gap-4 px-4 max-md:mb-2">
           {displayItems.map((item, idx) => (
             <Link
               key={`${item.caption}-${idx}`}

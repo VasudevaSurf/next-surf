@@ -80,7 +80,7 @@ Now you can focus on growing your business."
       />
 
       {/* SIGN UP CTA */}
-      <section className="py-20 px-8 bg-seller-gradient">
+      <section className="md:py-20 px-8 bg-seller-gradient">
         <div className="max-w-[1280px] mx-auto">
           <div className="p-[56px_48px] flex flex-col md:flex-row items-center justify-between gap-8 group">
             <div>

@@ -31,34 +31,34 @@ export default function HomePage() {
       />
 
       {/* This is how Surf works — Removed text-center for 1:1 parity */}
-      <section className="py-20 px-8 bg-grey">
+      <section className="py-12 md:py-20 px-8 bg-grey">
         <div className="max-w-[1280px] mx-auto">
-          <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-extrabold tracking-[-0.8px] leading-[1.15] text-black mb-12 text-center">
+          <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-extrabold tracking-[-0.8px] leading-[1.15] text-black mb-7 sm:mb-12 text-center">
             This is how Surf works
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
             {/* Step 1 */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-1 sm:gap-4">
               <div className="aspect-square bg-grey rounded-[20px] overflow-hidden">
                 <img src="/assets/surfWorks/1.png" alt="Customer places order" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-[1.05rem] font-bold text-black mt-4">Customers place an order</h3>
+              <h3 className="text-[1.05rem] font-bold text-black mt-2 sm:mt-4">Customers place an order</h3>
               <p className="text-[0.9rem] text-text-2">Customers search for your products and buy directly through the Surf app or website, reaching shoppers already looking for what you sell.</p>
             </div>
             {/* Step 2 */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-1 sm:gap-4">
               <div className="aspect-square bg-grey rounded-[20px] overflow-hidden">
                 <img src="/assets/surfWorks/2.png" alt="Seller prepares order" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-[1.05rem] font-bold text-black mt-4">You prepare the order</h3>
+              <h3 className="text-[1.05rem] font-bold text-black mt-2 sm:mt-4">You prepare the order</h3>
               <p className="text-[0.9rem] text-text-2">Get notified instantly and manage every order from the Surf Seller Hub app. accept, prepare, and update from anywhere, right from your phone.</p>
             </div>
             {/* Step 3 */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-1 sm:gap-4">
               <div className="aspect-square bg-grey rounded-[20px] overflow-hidden">
                 <img src="/assets/surfWorks/3.png" alt="Delivery" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-[1.05rem] font-bold text-black mt-4">We help deliver your order</h3>
+              <h3 className="text-[1.05rem] font-bold text-black mt-2 sm:mt-4">We help deliver your order</h3>
               <p className="text-[0.9rem] text-text-2">Use your own couriers and Surf covers the delivery cost or let us handle it entirely. Surf's logistics partner collects directly from your store and delivers to your customer's door.</p>
             </div>
           </div>
@@ -98,12 +98,12 @@ export default function HomePage() {
         style={{ backgroundImage: "url('/assets/zeroPercent.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 max-w-[1280px] mx-auto text-center py-10">
+        <div className="relative z-10 max-w-[1280px] mx-auto text-center py-6 sm:py-10">
           <div className="badge brand inline-block px-[14px] py-[5px] rounded-full bg-[rgba(255,217,61,0.15)] text-[#FFD93D] text-[0.78rem] font-bold tracking-[0.3px] mb-5 uppercase">
             ✦ For Locally Built Brands
           </div>
           <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-extrabold tracking-[-3px] text-white leading-none mb-3 drop-shadow-md">
-            <span className="text-gradient">0%</span> commission.
+            <span className="text-gradient max-md:pr-[2px]">0%</span> commission.
           </h2>
           <p className="text-xl text-white/90 max-w-[520px] mx-auto mb-8 leading-[1.7] drop-shadow-md font-medium">
             If you're a locally built brand, you sell on Surf commission free.
@@ -144,8 +144,8 @@ export default function HomePage() {
       />
 
       {/* APP DOWNLOAD CTA — SIDE-BY-SIDE WITH OPTIMIZED BADGES */}
-      <section className="py-20 px-8 bg-grey">
-        <div className="max-w-[1024px] mx-auto flex flex-wrap items-center gap-[32px] justify-between">
+      <section className="py-12 md:py-20 px-8 bg-grey">
+        <div className="max-w-[1024px] mx-auto flex flex-wrap items-center gap-8 justify-between">
           <div className="flex-1 min-w-[280px] max-w-[500px]">
             <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-extrabold tracking-[-0.8px] leading-[1.15] text-black mb-0">
               Download the Seller Hub app
@@ -182,7 +182,7 @@ export default function HomePage() {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className="py-20 px-8 bg-seller-gradient">
+      <section className="md:py-20 px-8 bg-seller-gradient">
         <div className="max-w-[1280px] mx-auto">
           <div className="p-[56px_48px] rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-8 group">
             <div>

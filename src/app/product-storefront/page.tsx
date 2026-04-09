@@ -95,7 +95,7 @@ export default function ProductStorefrontPage() {
         columns={4}
       />
 
-      <section className="py-20 px-8 bg-grey">
+      <section className="md:py-20 px-8 bg-grey">
         <div className="max-w-[1280px] mx-auto">
           <div className="bg-grey p-[56px_48px] flex flex-col md:flex-row items-center justify-between gap-8 group">
             <div>
